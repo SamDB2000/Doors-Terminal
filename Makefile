@@ -1,7 +1,10 @@
 #Makefile for the doors game
 
-doors: doors.c
-	gcc -o doors.c doors
+doors: doors.o
+	gcc -o doors doors.o
+
+doors.o: doors.c
+	gcc -c doors.c
 
 clean:
-	rm doors
+	rm *.o
